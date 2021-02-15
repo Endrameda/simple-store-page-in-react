@@ -1,0 +1,38 @@
+@import "./src/assets/styles/system/vars";
+
+.site-path {
+	padding: 44px 0 50px;
+	text-align: center;
+	font-size: 0;
+
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		padding-top: 28px;
+		padding-bottom: 33px;
+	}
+
+	&__item {
+		font-size: 16px;
+		opacity: 0.7;
+		line-height: 21px;
+		text-transform: uppercase;
+		display: inline-block;
+		text-decoration: none;
+		color: $black;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 13px;
+			line-height: 17px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 12px;
+			margin-bottom: 2.5px;
+			margin-top: 2.5px;
+		}
+
+		&:last-child {
+			opacity: 1;
+			font-weight: 500;
+		}
+	}
+}

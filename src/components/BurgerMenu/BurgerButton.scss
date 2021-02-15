@@ -1,0 +1,85 @@
+@import "./src/assets/styles/system/vars";
+
+.burger {
+
+	&__button {
+		$button: &;
+		display: flex;
+		font-size: 0;
+		position: relative;
+		flex-direction: column;
+		padding: 5px;
+		cursor: pointer;
+
+		&-line {
+			height: 3.17px;
+			display: block;
+			width: 28.29px;
+			background-color: $black;
+
+			&:not(:last-child) {
+				margin-bottom: 4.7px;
+			}
+		}
+
+		&_close {
+			display: inline-block;
+			font-size: 0;
+			height: 40px;
+			width: 40px;
+			position: relative;
+
+			span {
+				position: absolute;
+				top: 19px;
+
+				&:first-child {
+					transform: rotate(45deg);
+				}
+
+				&:last-child {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&__content {
+		position: fixed;
+		top: 0;
+		right: -375px;
+		height: 100vh;
+		width: 375px;
+		background-color: $white;
+		z-index: 101;
+		transition: right 400ms ease-in-out;
+
+		&.is-open {
+			right: 0;
+		}
+	}
+
+	&__scroller {
+		padding: 20px 10px;
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	&__label {
+		background-color: rgba($black, 0.4);
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 100;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity, visibility 400ms ease-in-out;
+
+		&.is-open {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}

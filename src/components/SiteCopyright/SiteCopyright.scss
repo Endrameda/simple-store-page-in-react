@@ -1,0 +1,25 @@
+@import "./src/assets/styles/system/vars";
+
+.site-copyright {
+	font-family: $avenir;
+	font-weight: 400;
+	font-style: book;
+	font-size: 17px;
+	color: $white;
+	width: 230px;
+	line-height: 22px;
+	
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		text-align: center;
+		width: 200px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	&__footer {
+		margin-bottom: 19px;
+	}
+}

@@ -1,0 +1,97 @@
+@import "./src/assets/styles/system/vars";
+
+.product-cart-info {
+	overflow: hidden;
+	padding-bottom: 27px;
+
+	&__container {
+		display: flex;
+
+		@media all and (min-width: 1281px) {
+			min-height: 795px;
+		}
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			flex-direction: column;
+			padding: 0;
+		}
+	}
+
+	&__left {
+		flex: 0 0 833px;
+		width: 833px;
+		background-color: #f1f1f1;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			min-height: 400px;
+			flex: 1 1 auto;
+			width: 100%;
+		}
+	}
+
+	&__right {
+		background-color: #f1f1f1;
+		flex: 1 1 auto;
+		padding: 34px 0 34px 50px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 100%;
+			width: 300%;
+			background-color: #f1f1f1;
+		}
+
+		@media all and (max-width: map-get($breaks, desktop)) {
+			padding: 20px 0 20px 20px;
+		}
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			padding: 30px 25px;
+			text-align: center;
+		}
+	}
+
+	&__title {
+		font-size: 35px;
+		font-weight: 700;
+		line-height: 47px;
+		margin-bottom: 4px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 22px;
+			line-height: 30px;
+			text-align: left;
+		}
+	}
+
+	&__category {
+		font-size: 23px;
+		line-height: 31px;
+		margin-bottom: 46px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 27px;
+			text-align: left;
+		}
+	}
+
+	&__price {
+		font-size: 33px;
+		font-weight: 700;
+		line-height: 44px;
+		color: $black;
+		margin-bottom: 25px;
+		
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 22px;
+			line-height: 30px;
+			margin-bottom: 22px;
+		}
+	}
+}

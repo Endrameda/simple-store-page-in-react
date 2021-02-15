@@ -1,0 +1,41 @@
+@import "./src/assets/styles/system/vars";
+
+.product-cart-info-carousel {
+
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		max-width: 420px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.swiper-pagination {
+		bottom: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+			transition: 0.2s;
+			border-radius: 0;
+			opacity: 1;
+			background-color: $white;
+
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				width: 10px;
+				height: 10px;
+			}
+
+			&.swiper-pagination-bullet-active {
+				width: 18px;
+				height: 18px;
+				background-color: $red;
+
+				@media all and (max-width: map-get($breaks, tablet_lg)) {
+					width: 12px;
+					height: 12px;
+				}
+			}
+		}
+	}
+}

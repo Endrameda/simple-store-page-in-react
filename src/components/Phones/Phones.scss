@@ -1,0 +1,27 @@
+@import "./src/assets/styles/system/vars";
+.phones {
+	margin-right: 75px;
+	
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	
+	&__row {
+		margin-bottom: 8px;
+
+		a {
+			color: $white;
+			font-size: 19px;
+			line-height: 22px;
+			display: inline-block;
+
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				font-size: 16px;
+				text-align: center;
+			}
+		}
+	}
+}

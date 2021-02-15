@@ -1,0 +1,13 @@
+@import "./src/assets/styles/system/vars";
+
+.title {
+	font-size: 35px;
+	color: $black;
+	font-weight: 400;
+	line-height: 45px;
+
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		font-size: 25px;
+		line-height: 33px;
+	}
+}

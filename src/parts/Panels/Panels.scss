@@ -1,0 +1,54 @@
+@import "./src/assets/styles/system/vars";
+
+.panels {
+	position: relative;
+	padding-top: 114px;
+	padding-bottom: 110px;
+
+	@media all and (max-width: map-get($breaks, tablet-lg)) {
+		padding-bottom: 71px;
+		padding-top: 56px;
+	}
+
+	&__title {
+		margin-bottom: 100px;
+
+		@media all and (max-width: map-get($breaks, tablet-lg)) {
+			margin-bottom: 73px;
+		}
+	}
+
+	&__container {
+		@media all and (max-width: map-get($breaks, mobile_sm)) {
+			padding-right: 0;
+		}
+	}
+
+	&__body {
+		position: relative;
+	}
+
+	&__more-icon {
+		margin-right: 20px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			width: 32px;
+			margin-right: 17px;
+		}
+	}
+
+	&__more-link {
+		text-decoration: underline;
+		color: $dark;
+		display: inline-flex;
+		align-items: center;
+		font-size: 22px;
+		font-family: $avenir;
+		font-weight: 400;
+		
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+}

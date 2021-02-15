@@ -1,0 +1,147 @@
+@import "./src/assets/styles/system/vars";
+@import './src/assets/styles/system/mixins';
+
+.panels-carousel {
+
+
+	&__img {
+		margin-bottom: 24px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			margin-bottom: 10px;
+		}
+
+		img {
+			margin: 0 auto;
+
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				height: 210px;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 32px;
+		font-weight: 500;
+		text-align: center;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+
+	.swiper-container {
+		padding-bottom: 135px;
+		margin-bottom: 10px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			padding-bottom: 100px;
+		}
+
+		@media all and (max-width: map-get($breaks, mobile_sm)) {
+			padding-right: 90px;
+		}
+
+		.swiper-scrollbar {
+			left: auto;
+			right: 170px;
+			width: 53%;
+			top: auto;
+			bottom: 36px;
+			height: 2px;
+			background-color: #b9b9b9;
+			border-radius: 0;
+			
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				width: 87%;
+				right: 20px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				font-size: 0;
+				width: 4px;
+				height: 28px;
+				background-color: $red;
+				right: 26px;
+				top: -37px;
+				pointer-events: none;
+
+				@media all and (max-width: map-get($breaks, tablet_lg)) {
+					width: 3px;
+					height: 20px;
+					right: 15px;
+					top: -30px;
+				}
+			}
+		}
+
+		.swiper-scrollbar-drag {
+			height: 4px;
+			top: -1px;
+			border-radius: 0;
+			background-color: $red;
+		}
+
+		.swiper-button-next, .swiper-button-prev {
+			width: 14px;
+			height: 28px;
+			font-size: 0;
+			top: auto;
+			bottom: 47px;
+			right: 171px;
+			margin: 0;
+
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				width: 10px;
+				height: 20px;
+				right: 20px;
+			}
+
+			&:after {
+				width: 14px;
+				height: 28px;
+				transition: 0.2s;
+				content: '';
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-image: svg('<svg xmlns="http://www.w3.org/2000/svg" width="13.878" height="27.754" viewBox="0 0 13.878 27.754"><path id="Path_1098" data-name="Path 1098" d="M0,0V27.754L13.878,13.877Z" fill="#656565"/></svg>');
+
+				@media all and (max-width: map-get($breaks, tablet_lg)) {
+					width: 10px;
+					height: 20px;
+					background-image: svg('<svg xmlns="http://www.w3.org/2000/svg" width="9.11" height="19.82" viewBox="0 0 9.11 19.82"><path id="Path_1098" data-name="Path 1098" d="M0,0V19.82L9.13,9.11Z" fill="#656565"/></svg>');
+				}
+			}
+
+			&.swiper-button-disabled {
+				opacity: 1;
+
+				&:after {
+					background-image: svg('<svg xmlns="http://www.w3.org/2000/svg" width="13.878" height="27.754" viewBox="0 0 13.878 27.754"><path id="Path_1098" data-name="Path 1098" d="M0,0V27.754L13.878,13.877Z" fill="#B9B9B9"/></svg>');
+
+					@media all and (max-width: map-get($breaks, tablet_lg)) {
+						background-image: svg('<svg xmlns="http://www.w3.org/2000/svg" width="9.11" height="19.82" viewBox="0 0 9.11 19.82"><path id="Path_1098" data-name="Path 1098" d="M0,0V19.82L9.13,9.11Z" fill="#B9B9B9"/></svg>');
+					}
+				}
+			}
+		}
+
+		.swiper-button-next {
+
+		}
+
+		.swiper-button-prev {
+			right: 211px;
+			left: auto;
+			transform: rotate(180deg);
+
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				right: 43px;
+			}
+		}
+	}
+}

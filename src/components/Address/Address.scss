@@ -1,0 +1,27 @@
+@import "./src/assets/styles/system/vars";
+
+.contacts {
+	font-size: 19px;
+	color: $white;
+	width: 311px;
+	margin-right: 52px;
+
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		font-size: 16px;
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		font-size: 1em;
+		line-height: 1.5em;
+		margin-bottom: 7px;
+	}
+
+	&__text {
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+}

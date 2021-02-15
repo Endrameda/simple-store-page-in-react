@@ -1,0 +1,117 @@
+@import "./src/assets/styles/system/vars";
+
+.catalog-product-thumb {
+	width: 25%;
+	min-width: 25%;
+	padding: 0 27px;
+
+	@media all and (max-width: map-get($breaks, desktop)) {
+		padding: 0 17px;
+	}
+
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		width: 33.33%;
+		min-width: 33.33%;
+	}
+
+	@media all and (max-width: map-get($breaks, tablet_sm)) {
+		width: 50%;
+		min-width: 50%;
+	}
+	
+	@media all and (max-width: map-get($breaks, mobile_sm)) {
+		width: 65%;
+		min-width: 65%;
+	}
+
+	&__in {
+		background-color: $white;
+		height: 100%;
+		box-shadow: 0 20px 26px 0 rgba($black, 0.16);
+	}
+
+	&__top {
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	&__bg-img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		padding-top: 100%;
+		z-index: 1;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+
+	&__door {
+		position: relative;
+		z-index: 2;
+		padding: 50px 15px 0;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)){
+			padding: 30px 40px 0;
+		}
+
+		@media all and (max-width: map-get($breaks, mobile)) {
+			padding: 30px 38px 0;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+	}
+
+	&__info {
+		padding: 0 20px 38px;
+		text-align: center;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			padding: 0 10px 20px;
+		}
+	}
+
+	&__text {
+		font-size: 23px;
+		font-weight: 500;
+		line-height: 31px;
+		text-align: center;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		padding-bottom: 37px;
+		position: relative;
+		margin-bottom: 15px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 90%;
+			border-bottom: 3px solid $red;
+		}
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+
+	&__price {
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 31px;
+		margin-bottom: 13px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			font-size: 16px;
+			line-height: 21px;
+			margin-bottom: 18px;
+		}
+	}
+}

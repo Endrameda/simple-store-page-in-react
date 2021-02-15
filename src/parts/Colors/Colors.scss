@@ -1,0 +1,36 @@
+@import "./src/assets/styles/system/vars";
+
+.colors {
+	background-color: #f1f1f1;
+	padding-top: 62px;
+	padding-bottom: 39px;
+	position: relative;
+
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		padding-top: 23px;
+		padding-bottom: 31px;
+	}
+
+	&__title {
+		margin-bottom: 96px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			margin-bottom: 73px;
+		}
+	}
+
+	&__body {
+		position: relative;
+	}
+
+	&__list {
+		overflow: hidden;
+	}
+
+	&__list-in {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin: 0 -14px;
+	}
+}

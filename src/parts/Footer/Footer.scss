@@ -1,0 +1,52 @@
+@import "./src/assets/styles/system/vars";
+
+.footer {
+	background-color: #535556;
+	padding-top: 34px;
+	padding-bottom: 54px;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid $white;
+		padding-bottom: 27px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			flex-direction: column;
+			padding-bottom: 27px;
+		}
+	}
+
+	&__bottom {
+		padding-top: 30px;
+		display: flex;
+		justify-content: space-between;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			flex-direction: column-reverse;
+			padding-top: 26px;
+		}
+	}
+
+	&__left {
+		flex: 0 0 auto;
+
+		&-top {
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				margin-bottom: 35px;
+			}
+		}
+	}
+
+	&__right {
+		&-bottom {
+			display: flex;
+
+			@media all and (max-width: map-get($breaks, tablet_lg)) {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+}

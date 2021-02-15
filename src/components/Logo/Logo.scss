@@ -1,0 +1,30 @@
+@import "./src/assets/styles/system/vars";
+
+.logo {
+	display: block;
+
+	&_header {
+		height: 50px;
+		width: 332px;
+
+		@media all and (max-width: map-get($breaks, laptop)) {
+			width: 217px;
+			height: 33px;
+		}
+	}
+
+	&_footer {
+		width: 332px;
+		height: 50px;
+
+		@media all and (max-width: map-get($breaks, laptop)) {
+			width: 238px;
+			height: 35px;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}

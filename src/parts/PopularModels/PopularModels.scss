@@ -1,0 +1,50 @@
+@import "./src/assets/styles/system/vars";
+
+.popular-models {
+	background-color: #f1f1f1;
+	padding-top: 90px;
+	padding-bottom: 84px;
+	position: relative;
+	overflow: hidden;
+
+	@media all and (max-width: map-get($breaks, tablet_lg)) {
+		padding-top: 41px;
+		padding-bottom: 48px;
+	}
+
+	&__container {
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			padding-right: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 95px;
+
+		@media all and (max-width: map-get($breaks, tablet_lg)) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__body {
+		position: relative;
+	}
+
+	&__list-wr {
+		overflow-x: hidden;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin: 0 -30px;
+	}
+
+	&__list {
+		display: flex;
+		margin: 0 -27px;
+		padding-bottom: 60px;
+		overflow-y: auto;
+
+		@media all and (max-width: map-get($breaks, desktop)) {
+			margin: 0 -17px;
+		}
+	}
+}
